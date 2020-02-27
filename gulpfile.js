@@ -13,7 +13,7 @@ var path = require('path')
 var fs = require('fs')
 var cheerio = require('cheerio')
 
-var build_dir = 'SQuAD-explorer/' // good to have this be the same as the repo name for gh-pages purposes
+var build_dir = 'TyDiQA-explorer/' // good to have this be the same as the repo name for gh-pages purposes
 
 var rankEntries = function (entries) {
   entries.sort(function(a, b) {
@@ -178,8 +178,17 @@ gulp.task('connect', function () {
 
 var dataset_folder = './dataset/'
 var filepaths = [
-  dataset_folder + 'dev-v1.1.json',
-  dataset_folder + 'dev-v2.0.json',
+  dataset_folder + 'v1.0_tydiqa-goldp-v1.0-dev-all.json',
+  dataset_folder + 'tydiqa-goldp-v1.0-dev/tydiqa-goldp-dev-arabic.json',
+  dataset_folder + 'tydiqa-goldp-v1.0-dev/tydiqa-goldp-dev-bengali.json',
+  dataset_folder + 'tydiqa-goldp-v1.0-dev/tydiqa-goldp-dev-english.json',
+  dataset_folder + 'tydiqa-goldp-v1.0-dev/tydiqa-goldp-dev-finnish.json',
+  dataset_folder + 'tydiqa-goldp-v1.0-dev/tydiqa-goldp-dev-indonesian.json',
+  dataset_folder + 'tydiqa-goldp-v1.0-dev/tydiqa-goldp-dev-korean.json',
+  dataset_folder + 'tydiqa-goldp-v1.0-dev/tydiqa-goldp-dev-russian.json',
+  dataset_folder + 'tydiqa-goldp-v1.0-dev/tydiqa-goldp-dev-swahili.json',
+  dataset_folder + 'tydiqa-goldp-v1.0-dev/tydiqa-goldp-dev-telugu.json',
+
 ]
 
 var exploration_tasks = []
@@ -189,10 +198,12 @@ filepaths.forEach(function (filename) {
   var build_prefix = 'explore/'
 
   var json_file = require(filename)
-  var version = json_file.version
-  var split = path.basename(filename, '.json').split('-')[0]
+  var version = '1.0'
+  var parts = path.basename(filename, '.json').split('-')
+  var split = parts[parts.length-2]
+  var lang = parts[parts.length-1]
   var json_data = json_file.data
-  var version_and_split = version + '/' + split
+  var version_and_split = version + '/' + split + "/" + lang
 
   json_data.forEach(function (article) {
     var name = version_and_split + '/' + article['title']

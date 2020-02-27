@@ -1,9 +1,9 @@
 node_modules/
-SQuAD-explorer/
+TyDiQA-explorer/
 .publish/
 bower_components/
 *.DS_Store
-
+_site/
 development.json
 
 saved.html

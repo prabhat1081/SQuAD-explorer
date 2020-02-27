@@ -1,5 +1,5 @@
 {
-  "name": "squad-explorer",
+  "name": "tydiqa-explorer",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -26,12 +26,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rajpurkar/SQuAD-explorer.git"
+    "url": "git+https://github.com/prabhat1081/TyDiQA-explorer.git"
   },
-  "author": "Pranav Rajpurkar",
+  "author": "Prabhat Agarwal",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rajpurkar/SQuAD-explorer/issues"
+    "url": "https://github.com/prabhat1081/TyDiQA-explorer/issues"
   },
-  "homepage": "https://github.com/rajpurkar/SQuAD-explorer#readme"
+  "homepage": "https://github.com/prabhat1081/TyDiQA-explorer#readme"
 }

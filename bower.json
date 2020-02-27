@@ -1,12 +1,12 @@
 {
-  "name": "squad-explorer",
+  "name": "tydiqa-explorer",
   "description": "",
   "main": "gulpfile.js",
   "authors": [
-    "Pranav Rajpurkar"
+    "Prabhat Agarwal"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/rajpurkar/SQuAD-explorer",
+  "homepage": "https://github.com/prabhat1081/TyDiQA-explorer",
   "private": true,
   "ignore": [
     "**/.*",

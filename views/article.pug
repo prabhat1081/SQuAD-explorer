@@ -1,10 +1,10 @@
 extends layout
 
 block title
-  title SQuAD - the Stanford Question Answering Dataset
+  title TyDiQA - the Typologically Different Question Answering Dataset
 
 block description
-  meta(name='description', content='SQuAD is the Stanford Question Answering Dataset')
+  meta(name='description', content='TyDiQA is the Typologically Different Question Answering Dataset')
 
 block extralinks
   link(rel='stylesheet', href='/stylesheets/article.css')
@@ -27,7 +27,7 @@ block content
               h2 Scores
             .infoBody
               h1#title #{decodeURIComponent(title)}
-              h2#subtitle The Stanford Question Answering Dataset
+              h2#subtitle The Typologically Different Question Answering Dataset
               div         
                 each paragraph in paragraphs
                   .para-wrap
