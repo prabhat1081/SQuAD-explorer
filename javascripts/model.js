@@ -17,7 +17,7 @@
   var model_name = getUrlParameter('model')
   var version = getUrlParameter('version')
   if (model_name) {
-    $.getJSON('/SQuAD-explorer/models/' + version + '/' + model_name + '.json', function (data) {
+    $.getJSON('/TyDiQA-explorer/models/' + version + '/' + model_name + '.json', function (data) {
       $('.model-title-holder > h1').text('Predictions by ' + model_name)
       $('.model-title-holder').show()
       $('.prediction-holder').show()
